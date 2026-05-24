@@ -1,0 +1,3 @@
+-- Reference schema (managed by SQLAlchemy in data/db.py)
+-- Tables: news_articles, article_tickers, ohlcv, signals,
+-- recommendations, positions, alerts, backtest_runs, pipeline_runs

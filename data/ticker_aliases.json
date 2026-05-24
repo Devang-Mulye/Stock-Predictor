@@ -1,0 +1,102 @@
+{
+  "RELIANCE": {
+    "company": "Reliance Industries Limited",
+    "sector": "Energy",
+    "aliases": ["Reliance Industries", "RIL", "Reliance"]
+  },
+  "ONGC": {
+    "company": "Oil and Natural Gas Corporation",
+    "sector": "Energy",
+    "aliases": ["ONGC", "Oil and Natural Gas"]
+  },
+  "TATAMOTORS": {
+    "company": "Tata Motors Limited",
+    "sector": "Auto",
+    "aliases": ["Tata Motors", "Tata Motor"]
+  },
+  "BEL": {
+    "company": "Bharat Electronics Limited",
+    "sector": "Defense",
+    "aliases": ["Bharat Electronics", "BEL", "Bharat Electronics Limited"]
+  },
+  "TCS": {
+    "company": "Tata Consultancy Services",
+    "sector": "IT",
+    "aliases": ["TCS", "Tata Consultancy"]
+  },
+  "INFY": {
+    "company": "Infosys Limited",
+    "sector": "IT",
+    "aliases": ["Infosys", "Infy"]
+  },
+  "HDFCBANK": {
+    "company": "HDFC Bank Limited",
+    "sector": "Banking",
+    "aliases": ["HDFC Bank", "HDFC"]
+  },
+  "ICICIBANK": {
+    "company": "ICICI Bank Limited",
+    "sector": "Banking",
+    "aliases": ["ICICI Bank", "ICICI"]
+  },
+  "SBIN": {
+    "company": "State Bank of India",
+    "sector": "Banking",
+    "aliases": ["SBI", "State Bank of India"]
+  },
+  "ITC": {
+    "company": "ITC Limited",
+    "sector": "FMCG",
+    "aliases": ["ITC"]
+  },
+  "BHARTIARTL": {
+    "company": "Bharti Airtel Limited",
+    "sector": "Telecom",
+    "aliases": ["Bharti Airtel", "Airtel"]
+  },
+  "ADANIENT": {
+    "company": "Adani Enterprises Limited",
+    "sector": "Conglomerate",
+    "aliases": ["Adani Enterprises", "Adani"]
+  },
+  "WIPRO": {
+    "company": "Wipro Limited",
+    "sector": "IT",
+    "aliases": ["Wipro"]
+  },
+  "HINDUNILVR": {
+    "company": "Hindustan Unilever Limited",
+    "sector": "FMCG",
+    "aliases": ["HUL", "Hindustan Unilever"]
+  },
+  "SUNPHARMA": {
+    "company": "Sun Pharmaceutical Industries",
+    "sector": "Pharma",
+    "aliases": ["Sun Pharma", "Sun Pharmaceutical"]
+  },
+  "DRREDDY": {
+    "company": "Dr. Reddy's Laboratories",
+    "sector": "Pharma",
+    "aliases": ["Dr Reddy", "Dr Reddys", "Dr. Reddy's"]
+  },
+  "COALINDIA": {
+    "company": "Coal India Limited",
+    "sector": "Energy",
+    "aliases": ["Coal India"]
+  },
+  "NTPC": {
+    "company": "NTPC Limited",
+    "sector": "Energy",
+    "aliases": ["NTPC"]
+  },
+  "LT": {
+    "company": "Larsen & Toubro Limited",
+    "sector": "Infrastructure",
+    "aliases": ["L&T", "Larsen and Toubro", "Larsen & Toubro"]
+  },
+  "MARUTI": {
+    "company": "Maruti Suzuki India Limited",
+    "sector": "Auto",
+    "aliases": ["Maruti Suzuki", "Maruti"]
+  }
+}

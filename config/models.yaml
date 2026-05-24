@@ -1,0 +1,21 @@
+# Open-source models (README Section 22)
+
+sentiment:
+  primary: ProsusAI/finbert
+  fallback: yiyanghkust/finbert-tone
+
+embeddings:
+  primary: BAAI/bge-small-en-v1.5
+  fallback: sentence-transformers/all-MiniLM-L6-v2
+
+llm:
+  runtime: ollama
+  default_model: qwen2.5:7b
+  alternatives:
+    - mistral
+    - llama3
+    - deepseek-r1:7b
+    - gemma2:9b
+
+spacy:
+  model: en_core_web_sm
