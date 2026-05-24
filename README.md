@@ -863,3 +863,83 @@ The system should prioritize:
 - realistic expectations
 - continuous learning
 
+---
+
+# Quick Start (Implementation)
+
+This repository implements all 25 README sections as a local Python advisory system.
+
+## Prerequisites
+
+- Python 3.10+
+- [Ollama](https://ollama.com/) installed and running locally
+- 16GB+ RAM recommended (FinBERT + optional GPU)
+
+## Setup
+
+```bash
+cd Stock-Predictor
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Linux/macOS
+pip install -r requirements.txt
+# Technical indicators use pandas-ta-classic (pandas-ta is not on PyPI for Python 3.11)
+python scripts/download_spacy.py
+ollama pull qwen2.5:7b
+copy .env.example .env          # edit OLLAMA_MODEL if needed
+```
+
+## Run
+
+```bash
+# Single pipeline run (news → sentiment → signals → LLM → risk → alerts)
+python main.py --once
+
+# Scheduled pipeline (every 30 min by default)
+python main.py --schedule
+
+# Streamlit dashboard
+streamlit run dashboard/app.py
+
+# FastAPI (optional)
+uvicorn api.main:app --reload
+
+# Backtest a symbol
+python -m backtesting.runner --symbol BEL --days 365
+```
+
+## Project layout
+
+| Module | Purpose |
+|--------|---------|
+| `news_engine/` | Steps 1–2, 4: scrape, process, ticker mapping |
+| `sentiment_engine/` | Step 3: FinBERT sentiment |
+| `technical_engine/` | Steps 5–7, 20: market data, indicators, signals |
+| `llm_engine/` | Step 8: Ollama reasoning |
+| `risk_engine/` | Steps 9, 19: risk caps, FOMO/liquidity filters |
+| `portfolio_engine/` | Step 10: manual positions & sector exposure |
+| `backtesting/` | Step 11: backtrader swing strategy |
+| `alerts/` | Step 12: dashboard alerts (Telegram/Discord stubbed) |
+| `dashboard/` | Steps 13, 24: Streamlit UI + disclaimer |
+| `data/` | Step 14: SQLite models |
+| `api/` | FastAPI status endpoints |
+| `docs/FUTURE.md` | Step 18: planned advanced features |
+
+## Configuration
+
+Environment variables (see `.env.example`):
+
+- `OLLAMA_BASE_URL`, `OLLAMA_MODEL` — local LLM
+- `TOTAL_CAPITAL`, `MAX_DAILY_LOSS`, `MAX_WEEKLY_LOSS` — risk limits
+- `DATABASE_URL` — defaults to `data/stock_predictor.db`
+
+## Tests
+
+```bash
+pytest tests/ -v
+```
+
+## Disclaimer
+
+This software is for research and education only. It does not execute trades and does not guarantee profits. See `config/prompts.py` for the advisory disclaimer shown in the dashboard.
+
